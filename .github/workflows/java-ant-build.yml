@@ -18,6 +18,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
+        distribution: 'adopt-openjdk' # Adicione esta linha para especificar a distribuição
 
     - name: Install Ant
       run: sudo apt-get install ant
@@ -27,3 +28,4 @@ jobs:
 
     - name: Run tests with Ant
       run: ant test
+      
