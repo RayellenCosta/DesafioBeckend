@@ -17,6 +17,15 @@
         <!-- You can add additional build steps here if needed -->
     </target>
     
+    <!-- Run the compiled Java code -->
+    <target name="run" depends="build">
+        <java fork="true" classname="com.des.App" dir="${build.dir}">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+            </classpath>
+        </java>
+    </target>
+    
     <!-- Run tests (if you have any) -->
     <target name="test" depends="build">
         <!-- Add test tasks here -->
