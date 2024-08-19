@@ -5,6 +5,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,7 +19,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        distribution: 'temurin' # Use 'temurin' para a distribuição
+        distribution: 'temurin'
 
     - name: Install Ant
       run: sudo apt-get install ant
