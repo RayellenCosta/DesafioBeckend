@@ -1,0 +1,24 @@
+<project name="MyProject" default="compile" basedir=".">
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    
+    <!-- Create build directory -->
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+    </target>
+    
+    <!-- Compile the Java code -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${build.dir}"/>
+    </target>
+    
+    <!-- Run tests (if you have any) -->
+    <target name="test" depends="compile">
+        <!-- Add test tasks here -->
+    </target>
+    
+    <!-- Clean build artifacts -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+</project>
