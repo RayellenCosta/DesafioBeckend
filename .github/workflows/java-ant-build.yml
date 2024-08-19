@@ -29,3 +29,6 @@ jobs:
 
     - name: Run tests with Ant
       run: ant test
+
+    - name: Run the compiled Java code
+      run: ant run
