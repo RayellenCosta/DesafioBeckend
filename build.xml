@@ -1,4 +1,4 @@
-<project name="MyProject" default="compile" basedir=".">
+<project name="MyProject" default="build" basedir=".">
     <property name="src.dir" value="src"/>
     <property name="build.dir" value="build"/>
     
@@ -12,8 +12,13 @@
         <javac srcdir="${src.dir}" destdir="${build.dir}"/>
     </target>
     
+    <!-- Build target which depends on compile -->
+    <target name="build" depends="compile">
+        <!-- You can add additional build steps here if needed -->
+    </target>
+    
     <!-- Run tests (if you have any) -->
-    <target name="test" depends="compile">
+    <target name="test" depends="build">
         <!-- Add test tasks here -->
     </target>
     
